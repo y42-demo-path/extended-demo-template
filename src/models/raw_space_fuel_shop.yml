@@ -30,6 +30,24 @@ sources:
             default_cursor_field: []
             source_defined_primary_key:
               - - id
+        columns:
+          - name: amount_total
+            data_type: INTEGER
+            description: The total order amount in euro cents
+          - name: id
+            data_type: STRING
+            description: Unique ID for the payment. There should be only one payment per
+              order.
+          - name: order_id
+            data_type: STRING
+            description: Unique ID for the customer; primary key in the customers table
+          - name: payment_method
+            data_type: STRING
+            description: The method used to make the payment
+          - name: payment_status
+            data_type: STRING
+            description: Whether or not the payment came through properly; can be ACCEPTED,
+              DECLINED, or CANCELLED
       - name: public_orders
         config:
           y42_table:
@@ -49,6 +67,31 @@ sources:
             default_cursor_field: []
             source_defined_primary_key:
               - - id
+        columns:
+          - name: customer_id
+            data_type: STRING
+            description: Unique ID for the customer; primary key in the customers table
+          - name: fulfillment_method
+            data_type: STRING
+            description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
+              employee
+          - name: id
+            data_type: STRING
+            description: Unique ID for the order
+          - name: line_items
+            data_type: STRING
+            description: JSON list of items in the order. Contains product name, category,
+              and price
+          - name: service_station
+            data_type: STRING
+            description: Planet name of the service station where the order was placed
+          - name: status
+            data_type: STRING
+            description: "Status of the order. 0 for cancelled, 1 for declined, 2 for
+              accepted"
+          - name: updated_at
+            data_type: TIMESTAMP
+            description: Time at which the order was published to the database in CET
       - name: public_customers
         config:
           y42_table:
@@ -64,3 +107,13 @@ sources:
             default_cursor_field: []
             source_defined_primary_key:
               - - id
+        columns:
+          - name: first_name
+            data_type: STRING
+            description: First name of the customer
+          - name: id
+            data_type: STRING
+            description: "Unique ID for the customer"
+          - name: last_name
+            data_type: STRING
+            description: Last name of the customer
