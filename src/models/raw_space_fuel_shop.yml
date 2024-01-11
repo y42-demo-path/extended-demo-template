@@ -12,6 +12,7 @@ sources:
       experts:
         users:
           - rob.dewit@y42.com
+      asset_status: verified
     tables:
       - name: public_payments
         config:
@@ -72,6 +73,7 @@ sources:
                     - ACCEPTED
                     - DECLINED
                     - CANCELLED
+        description: ""
       - name: public_orders
         config:
           y42_table:
@@ -164,3 +166,4 @@ sources:
             description: Last name of the customer
             tests:
               - not_null
+    description: "Postgres database hosted in Y42-demo-data Google Cloud Project."
