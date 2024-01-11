@@ -45,7 +45,7 @@ sources:
               - unique
           - name: order_id
             data_type: STRING
-            description: Unique ID for the customer; primary key in the customers table
+            description: Unique ID for the order; primary key in the orders table
             tests:
               - not_null
               - unique
