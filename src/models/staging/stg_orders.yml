@@ -9,3 +9,18 @@ models:
     config:
       y42:
         apiVersion: v1
+    columns:
+      - name: order_id
+        data_type: STRING
+      - name: customer_id
+        data_type: STRING
+      - name: fulfillment_method
+        data_type: STRING
+      - name: line_items
+        data_type: STRING
+      - name: service_station
+        data_type: STRING
+      - name: order_status
+        data_type: STRING
+      - name: order_received
+        data_type: TIMESTAMP

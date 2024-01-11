@@ -9,3 +9,14 @@ models:
     config:
       y42:
         apiVersion: v1
+    columns:
+      - name: payment_id
+        data_type: STRING
+      - name: order_id
+        data_type: STRING
+      - name: amount_total
+        data_type: INT64
+      - name: payment_method
+        data_type: STRING
+      - name: payment_status
+        data_type: STRING
