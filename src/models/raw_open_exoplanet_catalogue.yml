@@ -1,0 +1,22 @@
+version: 2
+
+sources:
+  - name: raw_open_exoplanet_catalogue
+    config:
+      y42_source:
+        type: python-ingest
+      y42:
+        apiVersion: v2
+    meta:
+      experts:
+        users:
+          - rob.dewit@y42.com
+      asset_status: draft
+    description: "CSV dataset from the Open Exoplanet Catalogue. Source points to
+      most recent dataset version on \\`main\\` branch of
+      `https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/`\\
+
+      \\
+
+      Contains all discovered exoplanets (planets outside of our solar
+      system)."
