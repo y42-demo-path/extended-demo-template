@@ -1,0 +1,10 @@
+version: 2
+
+orchestrations:
+  - name: all_assets_hourly
+    config:
+      enabled: true
+      command: y42 build
+      cron: 0 0/1 1/1 * *
+      y42:
+        apiVersion: v1
