@@ -21,6 +21,9 @@ sources:
           - name: name
             data_type: STRING
             description: Primary identifier of planet
+            tests:
+              - not_null
+              - unique
           - name: binaryflag
             data_type: INTEGER
             description: Binary flag [0=no known stellar binary companion; 1=P-type binary
