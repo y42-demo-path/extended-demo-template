@@ -142,6 +142,11 @@ sources:
         meta:
           asset_status: verified
         description: "Table that records orders placed at the Space Fuel Shop. "
+        tests:
+          - dbt_utils.recency:
+              datepart: minute
+              field: updated_at
+              interval: 15
       - name: public_customers
         config:
           y42_table:
