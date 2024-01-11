@@ -73,7 +73,10 @@ sources:
                     - ACCEPTED
                     - DECLINED
                     - CANCELLED
-        description: ""
+        description: "Table that records payments for every order placed at the Space
+          Fuel Shop. There should be one payment per order."
+        meta:
+          asset_status: verified
       - name: public_orders
         config:
           y42_table:
@@ -136,6 +139,9 @@ sources:
           - name: updated_at
             data_type: TIMESTAMP
             description: Time at which the order was published to the database in CET
+        meta:
+          asset_status: verified
+        description: "Table that records orders placed at the Space Fuel Shop. "
       - name: public_customers
         config:
           y42_table:
@@ -166,4 +172,7 @@ sources:
             description: Last name of the customer
             tests:
               - not_null
+        meta:
+          asset_status: verified
+        description: "Table that records customer registrations of the Space Fuel Shop. "
     description: "Postgres database hosted in Y42-demo-data Google Cloud Project."

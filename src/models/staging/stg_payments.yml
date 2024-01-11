@@ -6,6 +6,7 @@ models:
       experts:
         users:
           - rob.dewit@y42.com
+      asset_status: verified
     config:
       y42:
         apiVersion: v1
@@ -26,3 +27,5 @@ models:
         data_type: STRING
         description: Whether or not the payment came through properly; can be ACCEPTED,
           DECLINED, or CANCELLED
+    description: Staging model that renames, reorders, and processes columns of the
+      payments table.
