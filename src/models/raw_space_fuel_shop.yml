@@ -34,20 +34,47 @@ sources:
           - name: amount_total
             data_type: INTEGER
             description: The total order amount in euro cents
+            tests:
+              - not_null
           - name: id
             data_type: STRING
             description: Unique ID for the payment. There should be only one payment per
               order.
+            tests:
+              - not_null
+              - unique
           - name: order_id
             data_type: STRING
             description: Unique ID for the customer; primary key in the customers table
+            tests:
+              - not_null
+              - unique
+              - relationships:
+                  to: public_orders
+                  field: id
           - name: payment_method
             data_type: STRING
             description: The method used to make the payment
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - CREDIT_CARD
+                    - DEBIT_CARD
+                    - CASH
+                    - GIFT_VOUCHER
+                    - REWARD_POINTS
           - name: payment_status
             data_type: STRING
             description: Whether or not the payment came through properly; can be ACCEPTED,
               DECLINED, or CANCELLED
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - ACCEPTED
+                    - DECLINED
+                    - CANCELLED
       - name: public_orders
         config:
           y42_table:
@@ -71,13 +98,27 @@ sources:
           - name: customer_id
             data_type: STRING
             description: Unique ID for the customer; primary key in the customers table
+            tests:
+              - not_null
+              - relationships:
+                  to: public_customers
+                  field: id
           - name: fulfillment_method
             data_type: STRING
             description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
               employee
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - SELF_SERVICE
+                    - SERVICED
           - name: id
             data_type: STRING
             description: Unique ID for the order
+            tests:
+              - unique
+              - not_null
           - name: line_items
             data_type: STRING
             description: JSON list of items in the order. Contains product name, category,
@@ -89,6 +130,13 @@ sources:
             data_type: STRING
             description: "Status of the order. 0 for cancelled, 1 for declined, 2 for
               accepted"
+            tests:
+              - not_null
+              - accepted_values:
+                  values:
+                    - "0"
+                    - "1"
+                    - "2"
           - name: updated_at
             data_type: TIMESTAMP
             description: Time at which the order was published to the database in CET
@@ -114,6 +162,11 @@ sources:
           - name: id
             data_type: STRING
             description: "Unique ID for the customer"
+            tests:
+              - unique
+              - not_null
           - name: last_name
             data_type: STRING
             description: Last name of the customer
+            tests:
+              - not_null
