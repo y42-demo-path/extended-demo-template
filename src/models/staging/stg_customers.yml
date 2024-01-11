@@ -12,10 +12,7 @@ models:
     columns:
       - name: customer_id
         data_type: STRING
-        description: Unique ID for the customer
       - name: first_name
         data_type: STRING
-        description: First name of the customer
       - name: last_name
         data_type: STRING
-        description: Last name of the customer

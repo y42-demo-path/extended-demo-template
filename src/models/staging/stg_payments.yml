@@ -12,17 +12,11 @@ models:
     columns:
       - name: payment_id
         data_type: STRING
-        description: Unique ID for the payment. There should be only one payment per order.
       - name: order_id
         data_type: STRING
-        description: Unique ID for the customer; primary key in the customers table
       - name: amount_total
         data_type: INT64
-        description: The total order amount in euro cents
       - name: payment_method
         data_type: STRING
-        description: The method used to make the payment
       - name: payment_status
         data_type: STRING
-        description: Whether or not the payment came through properly; can be ACCEPTED,
-          DECLINED, or CANCELLED
