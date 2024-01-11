@@ -20,3 +20,5 @@ sources:
 
       Contains all discovered exoplanets (planets outside of our solar
       system)."
+    tables:
+      - name: exoplanets
