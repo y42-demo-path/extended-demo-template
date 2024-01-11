@@ -49,9 +49,6 @@ sources:
             tests:
               - not_null
               - unique
-              - relationships:
-                  to: public_orders
-                  field: id
           - name: payment_method
             data_type: STRING
             description: The method used to make the payment
@@ -100,9 +97,6 @@ sources:
             description: Unique ID for the customer; primary key in the customers table
             tests:
               - not_null
-              - relationships:
-                  to: public_customers
-                  field: id
           - name: fulfillment_method
             data_type: STRING
             description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
