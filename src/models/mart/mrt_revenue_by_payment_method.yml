@@ -17,8 +17,7 @@ models:
         data_type: DATE
         description: Date on which the order was placed; derived from order_received (so
           may be subject to small timing issues).
-        tests:
-          - unique
+        tests: []
       - name: payment_method
         data_type: STRING
         description: The method selected when placing the order
