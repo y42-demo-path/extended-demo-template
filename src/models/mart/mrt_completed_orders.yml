@@ -13,44 +13,47 @@ models:
         apiVersion: v1
     columns:
       - name: order_date
-        data_type: DATE
         description: Date on which the order was placed; derived from order_received (so
           may be subject to small timing issues).
+        data_type: DATE
       - name: order_received
-        data_type: TIMESTAMP
         description: Timestamp (CET) at which the order was received by the service in.
           Orders are published on a 10 minute interval.
+        data_type: TIMESTAMP
       - name: order_id
-        data_type: STRING
         description: Unique ID for the order
-      - name: amount_total
-        data_type: INT64
-        description: The total order amount in euro cents
-      - name: fulfillment_method
         data_type: STRING
+      - name: amount_total
+        description: The total order amount in euro cents
+        data_type: INT64
+      - name: fulfillment_method
         description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
           employee
+        data_type: STRING
       - name: service_station
-        data_type: STRING
         description: Planet name of the service station where the order was placed
+        data_type: STRING
       - name: payment_id
-        data_type: STRING
         description: Unique ID for the payment. There should be only one payment per order.
+        data_type: STRING
       - name: payment_method
-        data_type: STRING
         description: The method used to make the payment
+        data_type: STRING
       - name: customer_id
-        data_type: STRING
         description: Unique ID for the customer
+        data_type: STRING
       - name: first_name
-        data_type: STRING
         description: First name of the customer
+        data_type: STRING
       - name: last_name
-        data_type: STRING
         description: Last name of the customer
-      - name: line_items
         data_type: STRING
+      - name: line_items
         description: JSON list of items in the order. Contains product name, category,
           and price
-    description: Table that shows all orders that have been completed. This means that both
-      \`order_status\` and \`payment_status\` are \`ACCEPTED\`.
+        data_type: STRING
+      - name: distance
+        data_type: FLOAT64
+        description: Distance of service station from sun in parsecs
+    description: Table that shows all orders that have been completed. This means
+      that both \`order_status\` and \`payment_status\` are \`ACCEPTED\`.
