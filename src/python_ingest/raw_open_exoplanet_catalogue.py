@@ -15,7 +15,6 @@ def exoplanets(context) -> pd.DataFrame:
     if r.status_code == 200:
         data = StringIO(r.content.decode('utf-8'))
         df = pd.read_csv(data)
-        logging.info(password)
     else: 
         logging.error(f"An error occurred. Error status_code: {r.status_code}")
     
