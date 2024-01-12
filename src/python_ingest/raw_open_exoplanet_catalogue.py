@@ -9,4 +9,4 @@ def exoplanets() -> pd.DataFrame:
     file_exoplanets = "https://raw.githubusercontent.com/OpenExoplanetCatalogue/oec_tables/master/comma_separated/open_exoplanet_catalogue.txt"
     df = pd.read_csv(file_exoplanets)
 
-    return df.head(1000) # Temporary, troubleshoot larger file later
+    return df
