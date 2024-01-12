@@ -8,8 +8,8 @@ from y42.v1.decorators import data_loader
 @data_loader
 def exoplanets(context) -> pd.DataFrame:
     file_exoplanets = "https://raw.githubusercontent.com/OpenExoplanetCatalogue/oec_tables/master/comma_separated/open_exoplanet_catalogue.txt"
-    user = context.secrets.get("EXOPLANET_USER")
-    password = context.secrets.get("EXOPLANET_KEY")
+    user = context.secrets.get("exoplanet_user")
+    password = context.secrets.get("exoplanet_pass")
 
     r = requests.get(file_exoplanets, auth=(user, password))
     if r.status_code == 200:
