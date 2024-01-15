@@ -111,7 +111,6 @@ sources:
               - accepted_values:
                   values:
                     - SERVICED
-                    - SELF_SERVICE
           - name: id
             data_type: STRING
             description: Unique ID for the order
