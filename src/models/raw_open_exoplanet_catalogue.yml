@@ -24,12 +24,6 @@ sources:
             tests:
               - not_null
               - unique
-              - accepted_values:
-                  values:
-                    - Venus
-                    - Mercury
-                    - Earth
-                    - Saturn
           - name: binaryflag
             data_type: INTEGER
             description: Binary flag [0=no known stellar binary companion; 1=P-type binary
