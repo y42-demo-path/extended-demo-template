@@ -6,7 +6,7 @@ models:
       experts:
         users:
           - rob.dewit@y42.com
-      asset_status: issue
+      asset_status: verified
       tier: tier 1
     config:
       y42:
