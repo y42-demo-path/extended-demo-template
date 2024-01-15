@@ -7,9 +7,12 @@ models:
         users:
           - rob.dewit@y42.com
       asset_status: verified
+      tier: tier 1
     config:
       y42:
         apiVersion: v1
+      tags:
+        - staging
     columns:
       - name: payment_id
         data_type: STRING

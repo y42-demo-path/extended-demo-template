@@ -11,6 +11,8 @@ models:
     config:
       y42:
         apiVersion: v1
+      tags:
+        - mart
     description: "Table that shows gross and net revenue per payment method per day."
     columns:
       - name: order_date

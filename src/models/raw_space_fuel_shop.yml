@@ -77,6 +77,14 @@ sources:
           Fuel Shop. There should be one payment per order."
         meta:
           asset_status: verified
+          experts:
+            users:
+              - octavian.zarzu@y42.com
+            teams: []
+          tier: tier 3
+        tags:
+          - source
+          - postgres
       - name: public_orders
         config:
           y42_table:
@@ -140,12 +148,20 @@ sources:
             description: Time at which the order was published to the database in CET
         meta:
           asset_status: verified
+          experts:
+            users:
+              - octavian.zarzu@y42.com
+            teams: []
+          tier: tier 3
         description: "Table that records orders placed at the Space Fuel Shop. "
         tests:
           - dbt_utils.recency:
               datepart: minute
               field: updated_at
               interval: 15
+        tags:
+          - source
+          - postgres
       - name: public_customers
         config:
           y42_table:
@@ -178,5 +194,13 @@ sources:
               - not_null
         meta:
           asset_status: verified
+          tier: tier 1
+          experts:
+            users:
+              - octavian.zarzu@y42.com
+            teams: []
         description: "Table that records customer registrations of the Space Fuel Shop. "
+        tags:
+          - source
+          - postgres
     description: "Postgres database hosted in Y42-demo-data Google Cloud Project."

@@ -11,6 +11,8 @@ models:
     config:
       y42:
         apiVersion: v1
+      tags:
+        - mart
     columns:
       - name: order_date
         description: Date on which the order was placed; derived from order_received (so
