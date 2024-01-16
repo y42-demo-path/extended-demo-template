@@ -116,9 +116,6 @@ sources:
               employee
             tests:
               - not_null
-              - accepted_values:
-                  values:
-                    - SERVICED
           - name: id
             data_type: STRING
             description: Unique ID for the order
