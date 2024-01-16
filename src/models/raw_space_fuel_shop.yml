@@ -110,6 +110,7 @@ sources:
             description: Unique ID for the customer; primary key in the customers table
             tests:
               - not_null
+              - unique
           - name: fulfillment_method
             data_type: STRING
             description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
