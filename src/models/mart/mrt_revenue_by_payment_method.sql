@@ -1,13 +1,7 @@
 WITH
 
 stg_orders AS (
-	SELECT "order_id",
-        "customer_id",
-        "fulfillment_method",
-        "line_items",
-        "service_station",
-        "order_status",
-        "order_received" FROM {{ ref('stg_orders') }}
+	SELECT * FROM {{ ref('stg_orders') }}
 ),
 
 stg_payments AS (
