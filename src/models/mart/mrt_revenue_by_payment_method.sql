@@ -5,11 +5,7 @@ stg_orders AS (
 ),
 
 stg_payments AS (
-	SELECT payment_id,
-        order_id,
-        amount_total,
-        payment_method,
-        payment_status FROM {{ ref('stg_payments') }}
+	SELECT *  FROM {{ ref('stg_payments') }}
 )
 
 
