@@ -1,7 +1,11 @@
 WITH
 
 source AS (
-	SELECT * FROM {{ source('raw_space_fuel_shop', 'public_payments') }}
+	SELECT "amount_total",
+        "id",
+        "order_id",
+        "payment_method",
+        "payment_status" FROM {{ source('raw_space_fuel_shop', 'public_payments') }}
 ),
 
 renamed AS (
