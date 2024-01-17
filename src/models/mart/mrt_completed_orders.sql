@@ -20,9 +20,8 @@ stg_exoplanets AS (
 SELECT
 	1 as x
 FROM stg_orders
-LIMIT 1
 UNION 
 SELECT 
     2 as x 
 FROM stg_exoplanets
-LIMIT 1
+
