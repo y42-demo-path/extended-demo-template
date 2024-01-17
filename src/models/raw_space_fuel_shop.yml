@@ -140,7 +140,7 @@ sources:
                   values:
                     - "0"
                     - "1"
-                    - "2"
+                    - "3"
           - name: updated_at
             data_type: TIMESTAMP
             description: Time at which the order was published to the database in CET
