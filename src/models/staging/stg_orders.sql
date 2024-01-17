@@ -20,7 +20,7 @@ SELECT
     customer_id,
     fulfillment_method,
     line_items,
-    {# service_station, #}
+    service_station,
     order_received,
     CASE
         WHEN order_status = "0" THEN "CANCELLED"
