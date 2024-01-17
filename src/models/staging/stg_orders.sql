@@ -2,7 +2,7 @@ WITH
 source AS (
     SELECT * FROM {{ source('raw_space_fuel_shop', 'public_orders') }}
 ),
-
+ 
 renamed AS (
     SELECT
         id AS order_id,
