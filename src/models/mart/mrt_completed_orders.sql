@@ -18,10 +18,10 @@ stg_exoplanets AS (
 
 
 SELECT
-	1 as x
+	DISTINCT 1 as x
 FROM stg_orders
-UNION 
+UNION ALL 
 SELECT 
-    2 as x 
+    DISTINCT 2 as x 
 FROM stg_exoplanets
 
