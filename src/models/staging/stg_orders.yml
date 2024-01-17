@@ -21,6 +21,8 @@ models:
       - name: customer_id
         data_type: STRING
         description: Unique ID for the customer; primary key in the customers table
+        tests:
+          - not_null
       - name: fulfillment_method
         data_type: STRING
         description: How the order was fulfilled; either SELF_SERVICE or SERVICED by an
