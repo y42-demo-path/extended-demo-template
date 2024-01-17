@@ -35,6 +35,12 @@ models:
         data_type: STRING
         description: "Status of the order: CANCELLED by customer, DECLINED by shop, or
           ACCEPTED"
+        tests:
+          - accepted_values:
+              values:
+                - INVALID
+                - DECLINED
+                - ACCEPTED
       - name: order_received
         data_type: TIMESTAMP
         description: Datetime when the order was received by the order service in CET.
