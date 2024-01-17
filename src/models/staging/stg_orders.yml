@@ -47,4 +47,4 @@ models:
       orders table.
     tests:
       - dbt_utils.expression_is_true:
-          expression: 1=1
+          expression: 2=2
