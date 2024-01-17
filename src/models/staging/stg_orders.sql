@@ -18,7 +18,7 @@ renamed AS (
 SELECT
     order_id,
     customer_id,
-    fulfillment_method,
+    {# fulfillment_method, #}
     line_items,
     service_station,
     order_received,
