@@ -27,5 +27,5 @@ SELECT
         WHEN order_status = "1" THEN "DECLINED"
         WHEN order_status = "2" THEN "ACCEPTED"
     END AS order_status
-        
+          
 FROM renamed
