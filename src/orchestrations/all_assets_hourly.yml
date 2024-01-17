@@ -1,7 +1,7 @@
 version: 2
 
 orchestrations:
-  - name: all_assets_every_30_min
+  - name: core_assets_every_30_min
     config:
       enabled: true
       command: y42 build -s tag:core
