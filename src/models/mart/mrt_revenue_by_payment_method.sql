@@ -11,6 +11,6 @@ stg_payments AS (
 
 
 SELECT
-	1 as x
+	DISTINCT 1 as x1, 2 as x2, 3 as x3, 4 as x4
 FROM stg_orders
 LIMIT 1
