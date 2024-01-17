@@ -160,6 +160,7 @@ sources:
         tags:
           - source
           - postgres
+          - core
       - name: public_customers
         config:
           y42_table:

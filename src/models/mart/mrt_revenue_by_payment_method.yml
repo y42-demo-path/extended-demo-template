@@ -13,6 +13,7 @@ models:
         apiVersion: v1
       tags:
         - mart
+        - core
     description: "Table that shows gross and net revenue per payment method per day."
     columns:
       - name: order_date

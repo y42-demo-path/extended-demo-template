@@ -13,6 +13,7 @@ models:
         apiVersion: v1
       tags:
         - staging
+        - core
     columns:
       - name: order_id
         data_type: STRING
