@@ -17,12 +17,8 @@ SELECT
 
 FROM stg_orders AS ord
 
-LEFT JOIN stg_payments AS pay
+INNER JOIN stg_payments AS pay
 	ON ord.order_id = pay.order_id
-
-WHERE
-	TRUE
-	AND pay.payment_method IS NOT NULL
 
 GROUP BY order_date, pay.payment_method
 	
