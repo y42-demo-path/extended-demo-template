@@ -22,7 +22,7 @@ SELECT
 	ord.order_received,
 	ord.order_id,
 	pay.amount_total,
-	{# ord.fulfillment_method, #}
+	ord.fulfillment_method,
 	ord.service_station,
 	exo.system_distance AS distance,
 	pay.payment_id,
