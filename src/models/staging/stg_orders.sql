@@ -18,7 +18,7 @@ renamed AS (
 SELECT
     order_id,
     customer_id,
-    {# fulfillment_method, #} 
+    fulfillment_method, 
     line_items,
     service_station,
     order_received,
@@ -27,5 +27,5 @@ SELECT
         WHEN order_status = "1" THEN "DECLINED"
         WHEN order_status = "2" THEN "ACCEPTED"
     END AS order_status
-                
+
 FROM renamed
