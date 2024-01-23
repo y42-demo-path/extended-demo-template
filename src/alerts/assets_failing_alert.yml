@@ -6,7 +6,7 @@ alerts:
       trigger:
         type: orchestration_status
         orchestrations:
-          - all_assets_every_30_min
+          - core_assets_every_30_min
         triggered_on:
           - partially_ready
           - invalid
@@ -14,5 +14,3 @@ alerts:
         email:
           email_addresses:
             - octavian.zarzu@y42.com
-      y42:
-        apiVersion: v1

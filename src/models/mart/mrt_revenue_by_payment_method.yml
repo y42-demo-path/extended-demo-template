@@ -11,6 +11,9 @@ models:
     config:
       y42:
         apiVersion: v1
+      tags:
+        - mart
+        - core
     description: "Table that shows gross and net revenue per payment method per day."
     columns:
       - name: order_date
@@ -21,6 +24,7 @@ models:
       - name: payment_method
         data_type: STRING
         description: The method selected when placing the order
+        tests: []
       - name: gross_revenue
         data_type: INT64
         description: Sum of `total_amount` in euro cents for all orders, regardless of
