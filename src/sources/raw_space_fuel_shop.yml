@@ -11,7 +11,7 @@ sources:
     meta:
       experts:
         users:
-          - rob.dewit@y42.com
+          - mail-product-support@y42.com
       asset_status: verified
     tables:
       - name: public_payments

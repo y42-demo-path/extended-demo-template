@@ -5,7 +5,7 @@ models:
     meta:
       experts:
         users:
-          - rob.dewit@y42.com
+          - mail-product-support@y42.com
     config:
       y42:
         apiVersion: v1

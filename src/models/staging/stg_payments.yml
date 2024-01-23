@@ -5,7 +5,7 @@ models:
     meta:
       experts:
         users:
-          - rob.dewit@y42.com
+          - mail-product-support@y42.com
       asset_status: verified
     config:
       y42:

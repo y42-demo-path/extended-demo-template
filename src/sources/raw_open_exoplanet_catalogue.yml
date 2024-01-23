@@ -10,7 +10,7 @@ sources:
     meta:
       experts:
         users:
-          - rob.dewit@y42.com
+          - mail-product-support@y42.com
       asset_status: draft
     description: "CSV dataset from the Open Exoplanet Catalogue. Source points to
       most recent dataset version on \\`main\\` branch of
