@@ -1,7 +1,7 @@
 WITH
 
 source AS (
-	SELECT * FROM {{ source('raw_open_exoplanet_catalogue', 'exoplanets') }}
+	SELECT * FROM {{ source('raw_exoplanets', 'exoplanets') }}
 ),
 
 renamed AS (
