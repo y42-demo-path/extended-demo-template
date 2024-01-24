@@ -23,7 +23,7 @@ SELECT
     service_station,
     order_received,
     CASE
-        WHEN order_status = "0" THEN "CANCELLED"
+        WHEN order_status = "0" THEN "INVALID"
         WHEN order_status = "1" THEN "DECLINED"
         WHEN order_status = "2" THEN "ACCEPTED"
     END AS order_status
