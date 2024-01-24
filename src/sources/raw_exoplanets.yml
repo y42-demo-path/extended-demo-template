@@ -11,7 +11,8 @@ sources:
       experts:
         users:
           - mail-product-support@y42.com
-      asset_status: draft
+      asset_status: verified
+      tier: tier 3
     description: "CSV dataset from the Open Exoplanet Catalogue. Source points to
       most recent dataset version on \\`main\\` branch of
       `https://github.com/OpenExoplanetCatalogue/open_exoplanet_catalogue/`"
@@ -101,3 +102,10 @@ sources:
           our solar system) as published by the Open Exoplanet Catalogue. Field
           descriptions from
           https://github.com/OpenExoplanetCatalogue/oec_tables/blob/master/FIELDS.md
+        meta:
+          asset_status: verified
+          tier: tier 3
+          experts:
+            users:
+              - mail-product-support@y42.com
+            teams: []

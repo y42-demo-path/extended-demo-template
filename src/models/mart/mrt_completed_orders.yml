@@ -14,7 +14,6 @@ models:
         apiVersion: v1
       tags:
         - mart
-        - core
     columns:
       - name: order_date
         description: Date on which the order was placed; derived from order_received (so
