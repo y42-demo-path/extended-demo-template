@@ -14,7 +14,7 @@ Because the secrets are not included in the Git repo, you must manually configur
   - **Password:** `dontpanic`
 - Custom secrets:
   - `exoplanet_user`: dummy secret, enter anything
-  - `exoplanet_password`: dummy secret, enter anything
+  - `exoplanet_pass`: dummy secret, enter anything
 
 ## Further documentation
 
