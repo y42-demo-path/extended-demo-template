@@ -14,6 +14,10 @@ stg_payments AS (
 
 stg_exoplanets AS (
 	SELECT * FROM {{ ref('stg_exoplanets') }}
+),
+
+stg_customer_loyalty AS (
+	SELECT * FROM {{ ref('stg_customer_loyalty') }}
 )
 
 
@@ -30,6 +34,7 @@ SELECT
 	cus.customer_id,
 	cus.first_name,
 	cus.last_name,
+    loy.loyalty_tier,
 	ord.line_items
 
 FROM stg_orders AS ord
@@ -42,6 +47,9 @@ LEFT JOIN stg_payments AS pay
 
 LEFT JOIN stg_exoplanets AS exo
 	ON ord.service_station = exo.exoplanet_name
+
+LEFT JOIN stg_customer_loyalty AS loy
+	ON cus.customer_id = loy.customer_id
 
 WHERE
 	TRUE
