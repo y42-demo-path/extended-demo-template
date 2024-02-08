@@ -6,6 +6,12 @@ models:
       experts:
         users:
           - rob.dewit@y42.com
+          - mail-product-support@y42.com
+        teams: []
+      asset_status: draft
+      tier: tier 3
     config:
       y42:
         apiVersion: v1
+    description: Staging model that renames, reorders, and processes columns of the
+      customer loyalty table.
