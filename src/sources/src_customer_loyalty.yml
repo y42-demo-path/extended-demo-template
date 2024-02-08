@@ -1,0 +1,48 @@
+version: 2
+
+sources:
+  - name: src_customer_loyalty
+    config:
+      y42_source:
+        type: cdata-googlesheets
+        connection: Customer Loyalty Google Sheet
+        settings:
+          Spreadsheet: Customer loyalty
+          FolderName: ""
+          FolderId: ""
+          ShowTrashedFiles: false
+          SkipHiddenSheets: false
+          SupportsAllDrives: false
+          UseIdAsTableName: false
+          TeamDrive: ""
+          DomainSharedFilesOnly: false
+          RecurseFolders: false
+          IgnoreErrorValues: false
+          disabled_tables:
+            - Folders
+            - Sheets
+            - Spreadsheets
+      y42:
+        apiVersion: v2
+    meta:
+      experts:
+        users:
+          - rob.dewit@y42.com
+    tables:
+      - name: Customer_loyalty_Customer_loyalty
+        config:
+          y42_table:
+            import: Customer loyalty_Customer loyalty
+            columns:
+              - id
+              - Customer ID
+              - Member since
+              - Tier
+              - Points
+            group: null
+            supported_sync_modes:
+              - full_refresh
+            default_cursor_field: []
+            source_defined_cursor: "False"
+            source_defined_primary_key:
+              - - id
