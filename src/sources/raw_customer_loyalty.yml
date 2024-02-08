@@ -1,7 +1,7 @@
 version: 2
 
 sources:
-  - name: src_customer_loyalty
+  - name: raw_customer_loyalty
     config:
       y42_source:
         type: cdata-googlesheets
