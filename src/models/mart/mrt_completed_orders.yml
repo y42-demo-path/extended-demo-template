@@ -56,7 +56,9 @@ models:
           and price
         data_type: STRING
       - name: distance
-        data_type: FLOAT64
         description: Distance of service station from sun in parsecs
+        data_type: FLOAT64
+      - name: loyalty_tier
+        data_type: STRING
     description: Table that shows all orders that have been completed. This means
       that both \`order_status\` and \`payment_status\` are \`ACCEPTED\`.
