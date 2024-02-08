@@ -27,7 +27,10 @@ sources:
     meta:
       experts:
         users:
-          - rob.dewit@y42.com
+          - mail-product-support@y42.com
+        teams: []
+      asset_status: draft
+      tier: tier 3
     tables:
       - name: Customer_loyalty_Customer_loyalty
         config:
@@ -46,3 +49,6 @@ sources:
             source_defined_cursor: "False"
             source_defined_primary_key:
               - - id
+    description: "Google sheet hosted here:
+      https://docs.google.com/spreadsheets/d/1aKd1Y39el2zxfsC0-dxGAhx_RZA3t6Lod\
+      h0WcdT_osk/edit#gid=956295739"
