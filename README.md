@@ -1,6 +1,6 @@
-# Y42 Demo Template
+# Y42 Extended Demo Template
 
-This repository contains the template space for the Space Fuel Shop demo. You can clone the repository to set up a new demo space.
+This repository contains the extended template space for the Space Fuel Shop demo. You can clone the repository to set up a new demo space.
 
 ## Secrets
 
@@ -15,6 +15,11 @@ Because the secrets are not included in the Git repo, you must manually configur
 - Custom secrets:
   - `exoplanet_user`: dummy secret, enter anything
   - `exoplanet_pass`: dummy secret, enter anything
+- CData Google Sheets:
+  - **Name:** `Customer loyalty`
+  - Don't select `backup` sheet
+  - [URL to Sheet](https://docs.google.com/spreadsheets/d/1aKd1Y39el2zxfsC0-dxGAhx_RZA3t6Lodh0WcdT_osk/edit#gid=956295739)
+  - Everyone with a `@y42.com` account can access this sheet
 
 ## Further documentation
 
