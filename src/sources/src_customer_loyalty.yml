@@ -49,6 +49,16 @@ sources:
             source_defined_cursor: "False"
             source_defined_primary_key:
               - - id
+        meta:
+          asset_status: draft
+          tier: tier 3
+          experts:
+            users:
+              - mail-product-support@y42.com
+            teams: []
+        description: "Table that records customers and their associated loyalty status.
+          Customers earn points for every purchase and can achieve one of five
+          statuses: bronze, silver, gold, platinum, and diamond."
     description: "Google sheet hosted here:
       https://docs.google.com/spreadsheets/d/1aKd1Y39el2zxfsC0-dxGAhx_RZA3t6Lod\
       h0WcdT_osk/edit#gid=956295739"
