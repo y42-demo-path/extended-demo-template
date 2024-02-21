@@ -62,12 +62,23 @@ sources:
         columns:
           - name: Customer_ID
             data_type: STRING
+            tests:
+              - unique
+              - not_null
           - name: Member_since
             data_type: TIMESTAMP
           - name: Points
             data_type: INTEGER
           - name: Tier
             data_type: STRING
+            tests:
+              - accepted_values:
+                  values:
+                    - "1"
+                    - "2"
+                    - "3"
+                    - "4"
+                    - "5"
           - name: id
             data_type: INTEGER
     description: "Google sheet hosted here:
