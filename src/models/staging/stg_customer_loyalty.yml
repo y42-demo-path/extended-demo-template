@@ -15,3 +15,12 @@ models:
         apiVersion: v1
     description: Staging model that renames, reorders, and processes columns of the
       customer loyalty table.
+    columns:
+      - name: customer_id
+        data_type: STRING
+      - name: member_since
+        data_type: TIMESTAMP
+      - name: total_points
+        data_type: INT64
+      - name: loyalty_tier
+        data_type: STRING

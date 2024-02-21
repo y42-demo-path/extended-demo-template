@@ -60,5 +60,13 @@ models:
         data_type: FLOAT64
       - name: loyalty_tier
         data_type: STRING
+        tests:
+          - accepted_values:
+              values:
+                - "1"
+                - "2"
+                - "3"
+                - "4"
+                - "5"
     description: Table that shows all orders that have been completed. This means
       that both \`order_status\` and \`payment_status\` are \`ACCEPTED\`.
