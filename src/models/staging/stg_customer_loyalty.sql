@@ -17,7 +17,14 @@ SELECT
 	customer_id,
 	member_since,
 	total_points,
-	tier AS loyalty_tier
+	tier AS loyalty_level,
+	CASE
+		WHEN tier = "1" THEN "BRONZE"
+		WHEN tier = "2" THEN "SILVER"
+		WHEN tier = "3" THEN "GOLD"
+		WHEN tier = "4" THEN "PLATINUM"
+		WHEN tier = "5" THEN "DIAMOND"
+	END AS loyalty_tier
 
 FROM renamed
 
