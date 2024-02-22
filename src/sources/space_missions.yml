@@ -1,0 +1,15 @@
+version: 2
+
+sources:
+  - name: space_missions
+    config:
+      y42_source:
+        type: python-ingest
+      y42:
+        apiVersion: v3
+    meta:
+      experts:
+        users:
+          - rob.dewit@y42.com
+    tables:
+      - name: space_missions_1957
