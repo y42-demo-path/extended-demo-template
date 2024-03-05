@@ -62,6 +62,9 @@ sources:
         columns:
           - name: Customer_ID
             data_type: STRING
+            tests:
+              - not_null
+              - unique
           - name: Member_since
             data_type: TIMESTAMP
           - name: Points
