@@ -26,3 +26,4 @@ Because the secrets are not included in the Git repo, you must manually configur
 
 - [Dataset design](https://www.notion.so/y42/Dataset-design-1f04d6f6e4e342ba99297fddca02bc38)
 - [Golden Sales Pitch](https://www.notion.so/y42/Golden-Sales-Pitch-08cf79883ec442feacaa1bbdcddea612)
+- [Set up Python Action for Gsheets](https://www.notion.so/y42/Setting-Up-Python-Actions-with-GSheet-30d628fea7ad46f0849c17bb9eccc992?pvs=4)
